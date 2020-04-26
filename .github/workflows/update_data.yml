@@ -12,6 +12,9 @@ jobs:
     
         steps:
           - uses: actions/checkout@v2
+            
+          - name: Installing dependencies
+            run: npm install
           
           - name: Updating the data
             run: node src/index.js
