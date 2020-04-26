@@ -2,8 +2,7 @@ name: Daily data fetching
 
 on:
   schedule:
-        # * is a special character in YAML so you have to quote this string
-        - cron:  '38 16 * * *'
+    - cron:  '38 16 * * *'
 
 jobs:
     build:
