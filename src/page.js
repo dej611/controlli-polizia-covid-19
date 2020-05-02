@@ -10,7 +10,7 @@ module.exports = async (crawler, mainURL, filteredDates) => {
         // Note: these are cheerio iterator methods which map old jQuery syntax
         .filter( (i, el) => {
             const $el = $(el);
-            return /^Controlli/.test($el.text())
+            return /^(Controlli|Servizi)/.test($el.text())
         })
         .map((i, el) => {
             const $el = $(el);
