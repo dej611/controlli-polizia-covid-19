@@ -65,7 +65,7 @@ const newJson = clone(currentJSON);
     // Produce a couple of charts to attach to the README file
 
     const personeSvg = await drawSeriesChart(newJson.series, 'persone', {
-        'controllate': 'Totale controlli',
+        'controllate': 'Totale controlli Persone',
         'sanzionate': 'Persone sanzionate',
         'denunciateFalseDichiarazione': 'Persone denunciate ex art. 495 e 496 C.P.',
         'denunciateQuarantena': 'Persone denunciate ex art. 260 r.d. 27.07.1934 n. 1265'
@@ -73,7 +73,7 @@ const newJson = clone(currentJSON);
     writeChart('./charts/series1.png', personeSvg);
 
     const attivitaSvg = await drawSeriesChart(newJson.series, 'attivita', {
-        'controllate': 'Totale controlli',
+        'controllate': 'Totale controlli Attività',
         'sanzionate': 'Attività sanzionate',
         'chiusuraProvvisoria': 'Chiusura provvisoria di attività ex art. 4, comma 4 DL 25.03.2020',
         'chiusuraTotale': 'Chiusura di Attività o esercizi ex art. 4, comma 2, DL 25.03.2020'
