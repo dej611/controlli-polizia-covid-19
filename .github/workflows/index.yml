@@ -16,7 +16,7 @@ jobs:
             run: npm install
           
           - name: Updating the data
-            run: node src/index.js
+            run: npm run build
 
           - name: Commit and push last data
             run: |

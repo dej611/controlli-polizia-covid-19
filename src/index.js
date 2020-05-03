@@ -4,7 +4,7 @@ const getLinksFromPage = require('./page.js');
 const getContentFromRemoteURL = require('./pdfParser.js');
 const {INDEX_URL, JSON_PATH, CSV_PATH} = require('./constants.js');
 const {getDaysToCheck, getMissingDates, sortByDate} = require('./dates.js');
-const drawSeriesChart = require('./chart.js');
+const drawCharts = require('./charts.js');
 const {clone, logger, getJSON, writeJSON, writeCSV, writeChart, createCSV, fileExists} = require('./util.js');
 
 const currentJSON = getJSON('../jsons/' + JSON_PATH);
@@ -14,9 +14,15 @@ const daysToCheck = getDaysToCheck();
 logger(`Days to check: ${daysToCheck.length}`);
 
 const missingDates = getMissingDates(daysToCheck, currentJSON);
-logger(`Missing dates to fetch: 
-    ${Object.keys(missingDates).join(', ') || 'All updated'}
-`);
+const missinDatesList = Object.keys(missingDates);
+
+if(!missinDatesList.length){
+    return logger(`No day to fetch, all updated.`);
+}
+
+logger(`Missing dates to fetch:
+\t${missinDatesList.join(', ')}
+    `);
 
 // Clone the JSON file to write
 const newJson = clone(currentJSON);
@@ -27,6 +33,19 @@ const newJson = clone(currentJSON);
         INDEX_URL,
         missingDates
     );
+
+    if(links.length < missinDatesList.length){
+        logger(`Could not find some dates on the website:
+\t${missinDatesList.filter( missingDate => 
+                !links.find( ({dateString}) => dateString === missingDate
+            )).join(', ')}`
+        );
+    }
+
+    // Early exit
+    if(!links.length){
+        return logger(`Nothing to process`);
+    }
 
     // fetch each URL now
     for ( const {url, dateString} of links){
@@ -63,22 +82,7 @@ const newJson = clone(currentJSON);
     }
 
     // Produce a couple of charts to attach to the README file
-
-    const personeSvg = await drawSeriesChart(newJson.series, 'persone', {
-        'controllate': 'Totale controlli Persone',
-        'sanzionate': 'Persone sanzionate',
-        'denunciateFalseDichiarazione': 'Persone denunciate ex art. 495 e 496 C.P.',
-        'denunciateQuarantena': 'Persone denunciate ex art. 260 r.d. 27.07.1934 n. 1265'
-    });
-    writeChart('./charts/series1.png', personeSvg);
-
-    const attivitaSvg = await drawSeriesChart(newJson.series, 'attivita', {
-        'controllate': 'Totale controlli Attività',
-        'sanzionate': 'Attività sanzionate',
-        'chiusuraProvvisoria': 'Chiusura provvisoria di attività ex art. 4, comma 4 DL 25.03.2020',
-        'chiusuraTotale': 'Chiusura di Attività o esercizi ex art. 4, comma 2, DL 25.03.2020'
-    });
-    writeChart('./charts/series2.png', attivitaSvg);
+    await drawCharts(newJson.series);
 
     logger(`All updated`);
 })();

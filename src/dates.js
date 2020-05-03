@@ -1,9 +1,16 @@
+
 const dayjs = require('dayjs');
-const customParseFormat = require('dayjs/plugin/customParseFormat');
+const customParseFormat = require("dayjs/plugin/customParseFormat");
+const localeData = require('dayjs/plugin/localeData');
 const {DATE_FORMAT, FIRST_DAY} = require('./constants.js');
+require('dayjs/locale/it');
 
 // Make dayjs understands various string formats
-dayjs.extend(customParseFormat);
+dayjs.locale('it');
+
+module.exports.dayjsExtended = dayjs
+                                .extend(customParseFormat)
+                                .extend(localeData);;
 
 module.exports.sortByDate = (d1, d2) => {
     const dd1 = dayjs(d1, DATE_FORMAT);

@@ -22,3 +22,5 @@ Questi grafici sono aggiornati giornalmente con gli ultimi dati.
 
 ![1](./charts/series1.png)
 ![2](./charts/series2.png)
+![1](./charts/punchcard_controllate.png)
+![2](./charts/punchcard_sanzionate.png)
