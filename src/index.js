@@ -5,7 +5,7 @@ const getContentFromRemoteURL = require('./pdfParser.js');
 const {INDEX_URL, JSON_PATH, CSV_PATH} = require('./constants.js');
 const {getDaysToCheck, getMissingDates, sortByDate} = require('./dates.js');
 const drawCharts = require('./charts.js');
-const {clone, logger, getJSON, writeJSON, writeCSV, writeChart, createCSV, fileExists} = require('./util.js');
+const {clone, logger, getJSON, writeJSON, writeCSV, createCSV, fileExists} = require('./util.js');
 
 const currentJSON = getJSON('../jsons/' + JSON_PATH);
 

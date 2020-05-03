@@ -1,7 +1,5 @@
 const { CanvasRenderService } = require('chartjs-node-canvas');
-const {DATA_FORMAT} = require('./constants.js');
 const {dayjsExtended} = require('./dates.js');
-
 
 const width = 600;
 const height = 400;
@@ -115,7 +113,8 @@ function fromSeriesToPunchCard(series, type){
   let shopsMax = 0;
   const datasets = [[], []];
   for (const record of series) {
-    const day = dayjsExtended(record.meta.date, "DD/MM/YYYY").day();
+    // Add a cyrcular shift to make Monday the first day
+    const day = (dayjsExtended(record.meta.date, "DD/MM/YYYY").day()  - 1 + 7) % 7;
     const peopleValue = record.persone[type];
     peopleMax = Math.max(peopleMax, peopleValue);
     datasets[0][day] = datasets[0][day] || 0;

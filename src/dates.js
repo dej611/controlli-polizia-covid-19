@@ -10,7 +10,7 @@ dayjs.locale('it');
 
 module.exports.dayjsExtended = dayjs
                                 .extend(customParseFormat)
-                                .extend(localeData);;
+                                .extend(localeData);
 
 module.exports.sortByDate = (d1, d2) => {
     const dd1 = dayjs(d1, DATE_FORMAT);
