@@ -43,9 +43,9 @@ const newJson = clone(currentJSON);
     }
 
     // Early exit
-    if(!links.length){
-        return logger(`Nothing to process`);
-    }
+    // if(!links.length){
+    //     return logger(`Nothing to process`);
+    // }
 
     // fetch each URL now
     for ( const {url, dateString} of links){

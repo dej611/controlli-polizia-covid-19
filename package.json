@@ -13,12 +13,17 @@
   ],
   "author": "Marco Liberati",
   "license": "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "chart.js": "^2.9.3",
     "chartjs-node-canvas": "^3.0.6",
+    "chartjs-plugin-annotation": "^0.5.7",
     "cheerio": "^1.0.0-rc.3",
     "crawler-request": "^1.2.2",
     "dayjs": "^1.8.25"
-  },
-  "dependencies": {}
+  }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

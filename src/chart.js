@@ -1,11 +1,15 @@
 const { CanvasRenderService } = require('chartjs-node-canvas');
+const annotationPlugin = require('chartjs-plugin-annotation');
 const {dayjsExtended} = require('./dates.js');
+console.log({annotationPlugin})
 
 const width = 600;
 const height = 400;
-const canvasRenderService = new CanvasRenderService(width, height);
+const canvasRenderService = new CanvasRenderService(width, height, ChartJS => {
+  ChartJS.plugins.register(annotationPlugin);
+});
 
-module.exports.drawSeriesChart = (series, root, titles) => {
+module.exports.drawSeriesChart = (series, root, titles, annotations) => {
     const labels = series.map( ({meta}) => meta.date );
     
     const datasets = Object.keys(series[0][root]);
@@ -38,15 +42,40 @@ module.exports.drawSeriesChart = (series, root, titles) => {
             scales: {
                 xAxes: [{
                     display: true,
-                    // ticks: {
-                    //     stepSize: 5
-                    // }
                 }],
                 yAxes: [{
                     ticks: {
                         beginAtZero: true
                     }
                 }]
+            },
+            annotation: {
+              drawTime: 'beforeDatasetsDraw',
+              events: [],
+              annotations: annotations.map( ({id, date, color, text}) => ({
+                id,
+                type: 'line',
+                mode: 'vertical',
+                scaleID: 'x-axis-0',
+                value: labels.findIndex( label => label === date),
+                borderColor: color,
+                borderWidth: 2,
+                label: {
+                  backgroundColor: 'rgba(255,255,255,0.5)',
+                  fontFamily: "sans-serif",
+                  fontSize: 12,
+                  fontStyle: "bold",
+                  fontColor: "#000",
+                  xPadding: 6,
+                  yPadding: 6,
+                  cornerRadius: 6,
+                  position: "right",
+                  xAdjust: 0,
+                  yAdjust: -100,
+                  enabled: true,
+                  content: text,
+                }
+              }))
             }
         }
     };
