@@ -1,7 +1,6 @@
 const { CanvasRenderService } = require('chartjs-node-canvas');
 const annotationPlugin = require('chartjs-plugin-annotation');
 const {dayjsExtended} = require('./dates.js');
-console.log({annotationPlugin})
 
 const width = 600;
 const height = 400;
