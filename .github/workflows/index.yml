@@ -2,7 +2,7 @@ name: Daily data fetching
 
 on:
   schedule:
-    - cron:  '09 18 * * *'
+    - cron:  '14 18 * * *'
 
 jobs:
     build:
