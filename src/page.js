@@ -9,7 +9,7 @@ function extractDateString($el){
         return dateString;
     }
     // otherwise try with some regexp and localization technique
-    const matches = $el.text().match(/(.*)del (.*)/);
+    const matches = $el.text().match(/(.*)del(l\'|\s)(.*)/)
     if(matches){
         const normalizedString = matches[2].replace('°', '');
         dateString = dayjsExtended(normalizedString, 'D MMMM YYYY', 'it');
