@@ -8,11 +8,16 @@ module.exports = async (series) => {
         color: 'red',
         text: "DCPM 25/03/2020"
     }, {
-
         id: 'phase-2',
         date: '04/05/2020',
         color: 'blue',
         text: "Inizio fase 2"
+    },
+    {
+        id: 'phase-3',
+        date: '03/06/2020',
+        color: 'blue',
+        text: "Inizio fase 3"
     }];
     // Time Series charts
     const personeSvg = await drawSeriesChart(series, 'persone', {
