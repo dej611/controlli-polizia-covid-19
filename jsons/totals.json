@@ -1708,6 +1708,34 @@
         "chiusuraProvvisoria": 8,
         "chiusuraTotale": 6
       }
+    },
+    "12/07/2020": {
+      "persone": {
+        "controllate": 59021,
+        "sanzionate": 92,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 1
+      },
+      "attivita": {
+        "controllate": 8340,
+        "sanzionate": 22,
+        "chiusuraProvvisoria": 10,
+        "chiusuraTotale": 1
+      }
+    },
+    "11/07/2020": {
+      "persone": {
+        "controllate": 60513,
+        "sanzionate": 21,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 4
+      },
+      "attivita": {
+        "controllate": 9743,
+        "sanzionate": 20,
+        "chiusuraProvvisoria": 4,
+        "chiusuraTotale": 2
+      }
     }
   },
   "series": [
@@ -3783,6 +3811,40 @@
       },
       "meta": {
         "date": "10/07/2020"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 60513,
+        "sanzionate": 21,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 4
+      },
+      "attivita": {
+        "controllate": 9743,
+        "sanzionate": 20,
+        "chiusuraProvvisoria": 4,
+        "chiusuraTotale": 2
+      },
+      "meta": {
+        "date": "11/07/2020"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 59021,
+        "sanzionate": 92,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 1
+      },
+      "attivita": {
+        "controllate": 8340,
+        "sanzionate": 22,
+        "chiusuraProvvisoria": 10,
+        "chiusuraTotale": 1
+      },
+      "meta": {
+        "date": "12/07/2020"
       }
     }
   ]
