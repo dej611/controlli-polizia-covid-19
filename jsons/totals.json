@@ -2436,6 +2436,20 @@
         "chiusuraProvvisoria": 0,
         "chiusuraTotale": 1
       }
+    },
+    "01/09/2020": {
+      "persone": {
+        "controllate": 0,
+        "sanzionate": 19,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 14
+      },
+      "attivita": {
+        "controllate": 0,
+        "sanzionate": 9,
+        "chiusuraProvvisoria": 0,
+        "chiusuraTotale": 0
+      }
     }
   },
   "series": [
@@ -5395,6 +5409,23 @@
       },
       "meta": {
         "date": "31/08/2020"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 0,
+        "sanzionate": 19,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 14
+      },
+      "attivita": {
+        "controllate": 0,
+        "sanzionate": 9,
+        "chiusuraProvvisoria": 0,
+        "chiusuraTotale": 0
+      },
+      "meta": {
+        "date": "01/09/2020"
       }
     }
   ]
