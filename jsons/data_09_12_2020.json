@@ -1,0 +1,14 @@
+{
+  "persone": {
+    "controllate": 66328,
+    "sanzionate": 773,
+    "denunciateFalseDichiarazione": 0,
+    "denunciateQuarantena": 12
+  },
+  "attivita": {
+    "controllate": 14505,
+    "sanzionate": 27,
+    "chiusuraProvvisoria": 4,
+    "chiusuraTotale": 4
+  }
+}
