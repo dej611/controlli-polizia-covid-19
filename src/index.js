@@ -44,6 +44,7 @@ const newJson = clone(currentJSON);
 
     // Early exit
     if(!links.length){
+        logger(`Check on page: ${INDEX_URL}`);
         return logger(`Nothing to process`);
     }
 
