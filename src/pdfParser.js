@@ -15,6 +15,7 @@ const triggersMapping = {
 };
 
 const triggers = Object.keys(triggersMapping);
+const triggersRegExpCache = triggers.map( trigger => RegExp(`^${trigger}`));
 
 module.exports = async (crawler, url) => {
             // return;
@@ -40,12 +41,23 @@ module.exports = async (crawler, url) => {
             
             let currentProp = '';
     
-            const lines = response.text.split('\n').map( s => s.trim()).filter( s => s.length );
+            const lines = response.text.split('\n').map( s => s.trim()).filter( s => s.length )
+            // scan lines in case this PDF has both table cell content into a single row
+            .flatMap((line => {
+                return triggersRegExpCache.reduce( (newLines, triggerRegExp, i) => {
+                    if(triggerRegExp.test(line)){
+                        const [_, valueRow] = line.split(triggers[i]);
+                        return [triggers[i], valueRow];
+                    }
+                    return newLines;
+                }, line);
+            }));
+
     
             for( const line of lines){
                 // if the line hits a key, then associate the json prop.
                 for( let i=0; i < triggers.length; i++){
-                    if(RegExp(`^${triggers[i]}`).test(line)){
+                    if(triggersRegExpCache[i].test(line)){
                         currentProp = triggersMapping[triggers[i]];
                         break;
                     }
