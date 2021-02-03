@@ -4564,6 +4564,34 @@
         "chiusuraProvvisoria": 29,
         "chiusuraTotale": 7
       }
+    },
+    "02/02/2021": {
+      "persone": {
+        "controllate": 97625,
+        "sanzionate": 774,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 5
+      },
+      "attivita": {
+        "controllate": 12990,
+        "sanzionate": 86,
+        "chiusuraProvvisoria": 6,
+        "chiusuraTotale": 5
+      }
+    },
+    "01/02/2021": {
+      "persone": {
+        "controllate": 104902,
+        "sanzionate": 942,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 5
+      },
+      "attivita": {
+        "controllate": 14353,
+        "sanzionate": 30,
+        "chiusuraProvvisoria": 6,
+        "chiusuraTotale": 2
+      }
     }
   },
   "series": [
@@ -10107,6 +10135,40 @@
       },
       "meta": {
         "date": "30/01/2021"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 104902,
+        "sanzionate": 942,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 5
+      },
+      "attivita": {
+        "controllate": 14353,
+        "sanzionate": 30,
+        "chiusuraProvvisoria": 6,
+        "chiusuraTotale": 2
+      },
+      "meta": {
+        "date": "01/02/2021"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 97625,
+        "sanzionate": 774,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 5
+      },
+      "attivita": {
+        "controllate": 12990,
+        "sanzionate": 86,
+        "chiusuraProvvisoria": 6,
+        "chiusuraTotale": 5
+      },
+      "meta": {
+        "date": "02/02/2021"
       }
     }
   ]
