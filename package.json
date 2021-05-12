@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartjs-node-canvas": "^3.0.6",
     "chartjs-plugin-annotation": "^0.5.7",
     "cheerio": "^1.0.0-rc.3",
