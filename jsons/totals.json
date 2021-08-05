@@ -7126,6 +7126,20 @@
         "chiusuraProvvisoria": 1,
         "chiusuraTotale": 0
       }
+    },
+    "03/08/2021": {
+      "persone": {
+        "controllate": 77970,
+        "sanzionate": 23,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 34
+      },
+      "attivita": {
+        "controllate": 7062,
+        "sanzionate": 4,
+        "chiusuraProvvisoria": 2,
+        "chiusuraTotale": 1
+      }
     }
   },
   "series": [
@@ -15780,6 +15794,23 @@
       },
       "meta": {
         "date": "02/08/2021"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 77970,
+        "sanzionate": 23,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 34
+      },
+      "attivita": {
+        "controllate": 7062,
+        "sanzionate": 4,
+        "chiusuraProvvisoria": 2,
+        "chiusuraTotale": 1
+      },
+      "meta": {
+        "date": "03/08/2021"
       }
     }
   ]
