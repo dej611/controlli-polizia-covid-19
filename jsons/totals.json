@@ -8344,6 +8344,48 @@
         "chiusuraProvvisoria": 0,
         "chiusuraTotale": 0
       }
+    },
+    "31/10/2021": {
+      "persone": {
+        "controllate": 71502,
+        "sanzionate": 16,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 0
+      },
+      "attivita": {
+        "controllate": 4643,
+        "sanzionate": 11,
+        "chiusuraProvvisoria": 5,
+        "chiusuraTotale": 0
+      }
+    },
+    "30/10/2021": {
+      "persone": {
+        "controllate": 68570,
+        "sanzionate": 17,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 0
+      },
+      "attivita": {
+        "controllate": 5207,
+        "sanzionate": 13,
+        "chiusuraProvvisoria": 1,
+        "chiusuraTotale": 0
+      }
+    },
+    "29/10/2021": {
+      "persone": {
+        "controllate": 75467,
+        "sanzionate": 32,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 1
+      },
+      "attivita": {
+        "controllate": 5654,
+        "sanzionate": 14,
+        "chiusuraProvvisoria": 2,
+        "chiusuraTotale": 2
+      }
     }
   },
   "series": [
@@ -18477,6 +18519,57 @@
       },
       "meta": {
         "date": "28/10/2021"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 75467,
+        "sanzionate": 32,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 1
+      },
+      "attivita": {
+        "controllate": 5654,
+        "sanzionate": 14,
+        "chiusuraProvvisoria": 2,
+        "chiusuraTotale": 2
+      },
+      "meta": {
+        "date": "29/10/2021"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 68570,
+        "sanzionate": 17,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 0
+      },
+      "attivita": {
+        "controllate": 5207,
+        "sanzionate": 13,
+        "chiusuraProvvisoria": 1,
+        "chiusuraTotale": 0
+      },
+      "meta": {
+        "date": "30/10/2021"
+      }
+    },
+    {
+      "persone": {
+        "controllate": 71502,
+        "sanzionate": 16,
+        "denunciateFalseDichiarazione": 0,
+        "denunciateQuarantena": 0
+      },
+      "attivita": {
+        "controllate": 4643,
+        "sanzionate": 11,
+        "chiusuraProvvisoria": 5,
+        "chiusuraTotale": 0
+      },
+      "meta": {
+        "date": "31/10/2021"
       }
     }
   ]
